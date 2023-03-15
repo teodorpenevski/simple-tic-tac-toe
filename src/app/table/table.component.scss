@@ -1,0 +1,40 @@
+main {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 0px;
+  justify-content: center;
+}
+app-cell {
+  border: 1px gray solid;
+  height: 200px;
+}
+h1 {
+  color: whitesmoke;
+  font-size: 3rem;
+}
+.player-X {
+  color: #ff3d71;
+}
+.player-O {
+  color: #3366ff;
+}
+.new-game-button {
+  width: 30%;
+  margin: 20px 0px 20px 0px;
+  font-size: 2rem;
+  color: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  background: none;
+  border: 2px solid;
+}
+.new-game-button:hover {
+  box-shadow: 0 0.7em 0.5em -0.4em adjust-hue(#f00, 45deg);
+  transform: translateY(-0.3em);
+  transition: 0.25s;
+}
+.winner {
+  color: #00d68f;
+}

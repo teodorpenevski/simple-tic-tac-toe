@@ -1,0 +1,24 @@
+<div *ngIf="!draw">
+  <h1 *ngIf="!winner">
+    Player Turn:
+    <span *ngIf="player == 'X'" class="player-X">{{ player }}</span>
+    <span *ngIf="player == 'O'" class="player-O">{{ player }}</span>
+  </h1>
+  <h1 class="winner" *ngIf="winner">
+    Player <span *ngIf="winner == 'X'" class="player-X">{{ winner }}</span>
+    <span *ngIf="winner == 'O'" class="player-O">{{ winner }}</span> has won!
+  </h1>
+</div>
+<div *ngIf="draw">
+  <h1>It's a draw!</h1>
+</div>
+
+<button class="new-game-button" (click)="createGame()">New Game</button>
+
+<main *ngIf="!winner">
+  <app-cell
+    *ngFor="let cell of cells; let i = index"
+    [value]="cell"
+    (click)="makeNextMove(i)"
+  ></app-cell>
+</main>
